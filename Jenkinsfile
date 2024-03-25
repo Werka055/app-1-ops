@@ -11,5 +11,16 @@ pipeline {
             }
         }
     }
+
+
+
+    stage('Deploy') {
+            when {
+                expression { params.DEPLOY }
+            }
+            steps {
+                echo 'Wdrażanie aplikacji...'
+            }
+    
 }
 
